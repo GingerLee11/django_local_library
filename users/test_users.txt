@@ -1,0 +1,5 @@
+username: Libraryfriend
+pswd: 本が好き！
+
+username: Reginald
+pswd: Regicide1

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    {% if '/create/' in request.path %}
+        <p><a href="{% url 'authors' %}">Cancel</a></p>
+    {% elif 'update/' in request.path %}
+        <p><a href="{{ author.get_absolute_url }}">Cancel</a></p>
+    {% endif %}
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
